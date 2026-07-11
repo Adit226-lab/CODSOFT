@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain Escapes | Mussoorie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo">PeakExplorer</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero Section with Call to Action -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Discover the Magic of Mussoorie</h1>
+                <p>Escape to the Queen of the Hills. Experience breathtaking views, serene landscapes, and crisp mountain air away from the city.</p>
+                <a href="#destinations" class="btn">Start Exploring</a>
+            </div>
+        </section>
+
+        <!-- Features Section with Columns & Boxes -->
+        <section id="destinations" class="features">
+            <h2>Why Visit the Mountains?</h2>
+            
+            <div class="column-container">
+                <div class="box">
+                    <h3>Lush Landscapes</h3>
+                    <p>Trek through beautiful trails surrounded by majestic pine and deodar forests.</p>
+                </div>
+                
+                <div class="box">
+                    <h3>Peace & Serenity</h3>
+                    <p>Leave the noise behind and find your center in the heart of nature.</p>
+                </div>
+                
+                <div class="box">
+                    <h3>Adventure Awaits</h3>
+                    <p>From nature walks to high-altitude hiking, find the perfect outdoor thrill.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 PeakExplorer. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+#now css code
+
+/* --- Base Reset & Typography --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Prevents padding from causing overlap */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f6;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 1.2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #1abc9c;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    border-bottom: 5px solid #1abc9c;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #1abc9c;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #16a085;
+}
+
+/* --- Features / Columns Section --- */
+.features {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.features h2 {
+    margin-bottom: 2.5rem;
+    font-size: 2.2rem;
+    color: #2c3e50;
+}
+
+/* Flexbox is used here to arrange the items neatly in a row */
+.column-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap; /* Allows columns to stack on smaller screens */
+}
+
+/* The "Boxes" */
+.box {
+    background: #fff;
+    padding: 2.5rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    flex: 1; /* Makes all boxes take up equal space */
+    min-width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-8px); /* Adds a nice floating effect on hover */
+}
+
+.box h3 {
+    color: #1abc9c;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #2c3e50;
+    color: #bdc3c7;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
