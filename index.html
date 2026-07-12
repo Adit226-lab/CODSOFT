@@ -1,158 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aditya Jha — Web Developer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Tab bar acts as sticky nav, styled like open editor tabs -->
-<nav class="tabbar" id="tabbar">
-  <div class="tabbar-inner">
-    <a href="#header" class="tab active" data-tab="index.html">
-      <span class="dot"></span>index.html
-    </a>
-    <a href="#about" class="tab" data-tab="about.css">about.css</a>
-    <a href="#skills" class="tab" data-tab="skills.js">skills.js</a>
-    <a href="#projects" class="tab" data-tab="projects.md">projects.md</a>
-    <a href="#resume" class="tab" data-tab="resume.pdf">resume.pdf</a>
-    <a href="#contact" class="tab" data-tab="contact.sh">contact.sh</a>
-  </div>
-</nav>
+<div class="calculator">
 
-<!-- HEADER / HERO -->
-<header id="header" class="section hero">
-  <div class="line-numbers" aria-hidden="true"></div>
-  <div class="content">
-    <p class="eyebrow">// welcome.init()</p>
-    <h1 class="terminal-type">
-      <span class="prompt">$</span> <span id="typed"></span><span class="cursor">▌</span>
-    </h1>
-    <p class="tagline">Building clean interfaces, one commit at a time.</p>
-    <div class="hero-actions">
-      <a href="#projects" class="btn btn-primary">View Projects</a>
-      <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+    <input type="text" id="display" readonly>
+
+    <div class="buttons">
+
+        <button class="clear">C</button>
+        <button class="operator">(</button>
+        <button class="operator">)</button>
+        <button class="operator">/</button>
+
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button class="operator">*</button>
+
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button class="operator">-</button>
+
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button class="operator">+</button>
+
+        <button>0</button>
+        <button>.</button>
+        <button class="equal">=</button>
+
     </div>
-  </div>
-</header>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-  <p class="file-label">about.css</p>
-  <div class="about-grid">
-    <div class="avatar-frame">
-      <div class="avatar-placeholder" aria-label="Photo of Aditya Jha">AJ</div>
-      <span class="frame-tag">.avatar { }</span>
-    </div>
-    <div class="about-text">
-      <h2><span class="comment">/* About */</span></h2>
-      <p>
-        Hi, I'm <strong>Aditya Jha</strong> — a web developer who enjoys turning
-        ideas into fast, functional, well-structured websites. I care about
-        clean code, thoughtful design, and building things that actually
-        solve problems for the people who use them.
-      </p>
-      <p>
-        Currently sharpening my skills in front-end and back-end development,
-        and always looking for the next interesting problem to build a
-        solution for.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="section skills-section">
-  <p class="file-label">skills.js</p>
-  <h2><span class="comment">// Skills</span></h2>
-  <div class="skills-grid">
-    <div class="skill-card"><span class="skill-key">"markup"</span>: <span class="skill-val">"HTML5"</span></div>
-    <div class="skill-card"><span class="skill-key">"style"</span>: <span class="skill-val">"CSS3"</span></div>
-    <div class="skill-card"><span class="skill-key">"logic"</span>: <span class="skill-val">"JavaScript"</span></div>
-    <div class="skill-card"><span class="skill-key">"framework"</span>: <span class="skill-val">"React"</span></div>
-    <div class="skill-card"><span class="skill-key">"backend"</span>: <span class="skill-val">"Node.js"</span></div>
-    <div class="skill-card"><span class="skill-key">"versioning"</span>: <span class="skill-val">"Git & GitHub"</span></div>
-    <div class="skill-card"><span class="skill-key">"database"</span>: <span class="skill-val">"MongoDB"</span></div>
-    <div class="skill-card"><span class="skill-key">"design"</span>: <span class="skill-val">"Responsive UI"</span></div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="section">
-  <p class="file-label">projects.md</p>
-  <h2><span class="comment">## Projects</span></h2>
-  <div class="projects-grid">
-
-    <article class="project-card">
-      <div class="project-thumb" style="--accent:#c4a7e7"></div>
-      <h3>01. Personal Portfolio</h3>
-      <p>This site — a responsive portfolio built from scratch with semantic
-      HTML and hand-written CSS, no frameworks.</p>
-      <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
-    </article>
-
-    <article class="project-card">
-      <div class="project-thumb" style="--accent:#a6e3a1"></div>
-      <h3>02. Task Tracker</h3>
-      <p>A drag-and-drop task board with local persistence, built to practice
-      state management and DOM events.</p>
-      <div class="tags"><span>JavaScript</span><span>CSS Grid</span></div>
-    </article>
-
-    <article class="project-card">
-      <div class="project-thumb" style="--accent:#f9e2af"></div>
-      <h3>03. Weather Dashboard</h3>
-      <p>A small dashboard that fetches live weather data from a public API
-      and renders it into a clean, card-based layout.</p>
-      <div class="tags"><span>API</span><span>Fetch</span><span>UI</span></div>
-    </article>
-
-  </div>
-</section>
-
-<!-- RESUME -->
-<section id="resume" class="section resume-section">
-  <p class="file-label">resume.pdf</p>
-  <h2><span class="comment">/* Resume */</span></h2>
-  <p>Want the full breakdown of my experience and education?</p>
-  <a href="./assets/resume.pdf" download class="btn btn-primary">
-    ⬇ Download Resume (PDF)
-  </a>
-  <p class="hint">Replace <code>assets/resume.pdf</code> with your own file.</p>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section contact-section">
-  <p class="file-label">contact.sh</p>
-  <h2><span class="comment"># Contact</span></h2>
-  <div class="contact-grid">
-    <a class="contact-item" href="mailto:aditya.jha@example.com">
-      <span class="contact-key">email</span> aditya.jha@example.com
-    </a>
-    <a class="contact-item" href="tel:+911234567890">
-      <span class="contact-key">phone</span> +91 12345 67890
-    </a>
-    <a class="contact-item" href="https://github.com/" target="_blank" rel="noopener">
-      <span class="contact-key">github</span> github.com/your-username
-    </a>
-    <a class="contact-item" href="https://linkedin.com/" target="_blank" rel="noopener">
-      <span class="contact-key">linkedin</span> linkedin.com/in/your-profile
-    </a>
-  </div>
-</section>
-
-<footer class="footer">
-  <p>© <span id="year"></span> Aditya Jha. Built with HTML &amp; CSS.</p>
-  <div class="footer-links">
-    <a href="#header">Back to top</a>
-  </div>
-</footer>
+</div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
